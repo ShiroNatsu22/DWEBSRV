@@ -69,7 +69,7 @@ class Pagina {
     public Pagina(int d, int m, boolean fes){
         dia = d;
         mes = m;
-        festiu = fes;
+
     }
     void escriureCita(String escriure){
         String horaI, horaF;
