@@ -18,10 +18,16 @@ public class Agenda {
     public Agenda (){
         Scanner s = new Scanner(System.in);
         System.out.println("De quin any es l'agenda?");
-        for (int i = 0; i < 9 ; i++) {
+        any=s.nextInt();
+        boolean festiu=false;
+        for (int i = 1; i < 10 ; i++) {
+            if(i % 7 == 0){
+                festiu=true;
+            }
 
-            Pagina p = new Pagina (1+i,9,false);
+            Pagina p = new Pagina (i,9,false);
             pagines.add(p);
+            festiu=false;
         }
         pagines.get(paginaActual);
 
@@ -84,6 +90,21 @@ class Pagina {
 
     void esborraCita(){
 
+
+    }
+
+    public String data(){
+        Scanner s =new Scanner(System.in);
+        int m,d;
+        String hora;
+        System.out.println("Quin mes vol seleccionar?");
+        m=s.nextInt();
+        System.out.println("Quin dia?");
+        d=s.nextInt();
+        System.out.println("Hora de la cita?");
+        hora=s.nextLine();
+        hora = m + d + hora;
+        return hora;
     }
 
     public int getDia() {
