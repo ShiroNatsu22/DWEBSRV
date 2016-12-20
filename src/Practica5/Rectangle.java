@@ -1,6 +1,7 @@
 package Practica5;
 
 import Practica5.FiguraGeometrica;
+import com.sun.org.apache.regexp.internal.RE;
 
 import java.awt.Color;
 
@@ -50,6 +51,16 @@ public class Rectangle extends FiguraGeometrica {
       System.out.println ("Per�metre.....:" + perimetre());
       System.out.println ("�rea..........:" + area());
    }
+
+
+
+   public static void main (String args[]) {
+
+            Rectangle r = new Rectangle (1, "Rectangle", Color.blue, 5,8);
+            r.visualitzar();
+
+         }
+
 
 
 }

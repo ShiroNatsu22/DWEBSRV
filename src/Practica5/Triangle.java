@@ -47,5 +47,12 @@ public class Triangle extends FiguraGeometrica {
       System.out.println ("�rea..........:" + area());
    }
 
+   public static void main (String args[]) {
+
+      Triangle t = new Triangle(1, "Triangle", Color.blue, 5,8);
+      t.visualitzar();
+
+   }
+
 
 }

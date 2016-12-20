@@ -9,8 +9,12 @@ public class Cercle extends FiguraGeometrica {
 
    public Cercle (int ncodi, String nnom, Color ncolor, double nradi) {
       super (ncodi, nnom, ncolor);
-      this.radi = nradi;
+       this.radi = nradi;
    }
+
+
+
+
 
    public void setRadi (double nouRadi) {
       if (nouRadi>=0) radi = nouRadi;
@@ -31,8 +35,15 @@ public class Cercle extends FiguraGeometrica {
    public void visualitzar () {
       System.out.println ("Soc un cercle");
       System.out.println ("*************");
+
       System.out.println ("Radi..........:" + radi);
       System.out.println ("Longitud......:" + perimetre());
       System.out.println ("Area..........:" + area());
+   }
+
+   public static void main (String args[]) {
+
+      Cercle c = new Cercle (1, "Cercle", Color.red, 50);
+      c.visualitzar();
    }
 }
